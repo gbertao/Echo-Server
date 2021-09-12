@@ -1,5 +1,7 @@
 package com.giovannibertao.example.echo;
 
 public class Config {
-    public static final String URL = "https://powerful-dawn-14548.herokuapp.com/teste";
+    private static final String baseURL = "http://192.168.0.8:5000";
+    public static final String getURL = baseURL + "/teste";
+    public static final String postURL = baseURL + "/echo";
 }

@@ -3,9 +3,6 @@ package com.giovannibertao.example.echo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -56,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private String getReq() {
         OkHttpClient client = new OkHttpClient();
         Request get = new Request.Builder()
-                .url(Config.URL)
+                .url(Config.getURL)
                 .build();
         try {
             Response response = client.newCall(get).execute();
